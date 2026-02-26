@@ -1,0 +1,140 @@
+.general-container {
+    display: grid;
+    /* Creiamo 3 colonne: una per lo status, due per info e other */
+    grid-template-columns: 25% 45% 25%; 
+    /* Creiamo 2 righe: una per la parte superiore (info/other), una per la inferiore (weekly) */
+    grid-template-rows: 60% 40%;
+    gap: 2%; 
+    padding: 2%;
+    height: 100vh;
+    box-sizing: border-box; /* Assicura che padding e border non sforino l'altezza/larghezza */
+}
+
+.status-container {
+    grid-column: 1 / 2; /* Occupa la prima colonna */
+    grid-row: 1 / 3;    /* Si estende dalla prima alla terza riga (occupa tutta l'altezza) */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+
+    border: rgb(255, 0, 0) solid 1px;
+    border-radius: 50px;
+}
+
+.info-container {
+    grid-column: 2 / 3; /* Occupa la seconda colonna */
+    grid-row: 1 / 2;    /* Sta nella prima riga in alto */
+    
+    border: rgb(0, 0, 255) solid 1px;
+    border-radius: 50px;
+}
+
+.other-container {
+    grid-column: 3 / 4; /* Occupa la terza colonna */
+    grid-row: 1 / 2;    /* Sta nella prima riga in alto */
+    
+    border: rgb(0, 255, 0) solid 1px;
+    border-radius: 50px;
+}
+
+.weekly-container {
+    grid-column: 2 / 4; /* Si estende dalla seconda alla quarta colonna (sta sotto a info e other) */
+    grid-row: 2 / 3;    /* Sta nella seconda riga in basso */
+    
+    border: rgb(174, 0, 255) solid 1px;
+    border-radius: 50px;
+}
+
+.logo{
+ 
+    border-radius: 50px;
+    text-align: center;
+    margin: 8%;
+    font-size: 0.8em;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    border-radius: 50px;
+    height: 40%;
+    width: 100%;
+}
+
+.details p{
+    margin-left: 5%;
+}
+
+.details a{
+    color: black;
+    text-decoration: none;
+    margin: auto;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+.chart{
+    border: cyan solid 1px;
+    border-radius: 30px;
+
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+
+.select-area{
+    
+    border-radius: 30px;
+
+    width: 100%;
+    height: 40%;
+    margin: auto;
+}
+
+.select-area p{
+    margin-left: 5%;
+}
+
+.world-illustration{
+    border: rgb(38, 0, 255) solid 1px;
+    border-radius: 30px;
+
+    width: 230px;
+    height: 230px;
+    margin: auto;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+#search-bar{
+    padding: 2%;
+    border-radius: 50px;
+    border: rgb(0, 0, 0) solid 1px;
+    text-align: center;
+    background-color: rgba(65, 65, 65, 0.26);
+}
+
+.search button{
+    width: 60px;
+    height: 35px;
+    border-radius: 30px;
+    border: rgb(0, 0, 0) solid 1px;
+    background-color: rgba(65, 65, 65, 0.26);
+    margin-left: 5%;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.search button:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
